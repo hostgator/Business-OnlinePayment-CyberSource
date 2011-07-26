@@ -232,6 +232,14 @@ TODO
     Pay Pal
     Full support including Level III descriptors
 
+BUGS
+    Please report any bugs or feature requests on the bugtracker website
+    https://github.com/xenoterracide/Business-OnlinePayment-CyberSource/issu
+    es
+
+    When submitting a bug or request, please include a test-file or a patch
+    to an existing test-file that illustrates the bug or desired feature.
+
 AUTHORS
     *   Peter Bowen <peter@bowenfamily.org>
 

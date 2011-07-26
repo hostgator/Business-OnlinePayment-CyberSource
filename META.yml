@@ -29,5 +29,7 @@ requires:
   Exporter: 0
   parent: 0
   perl: 5.006
-resources: {}
+resources:
+  bugtracker: https://github.com/xenoterracide/Business-OnlinePayment-CyberSource/issues
+  repository: git://github.com/xenoterracide/Business-OnlinePayment-CyberSource.git
 version: 2.02

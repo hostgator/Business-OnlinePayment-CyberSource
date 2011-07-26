@@ -48,8 +48,13 @@
    },
    "release_status" : "stable",
    "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/xenoterracide/Business-OnlinePayment-CyberSource/issues"
+      },
       "repository" : {
-         "type" : "git"
+         "type" : "git",
+         "url" : "git://github.com/xenoterracide/Business-OnlinePayment-CyberSource.git",
+         "web" : "https://github.com/xenoterracide/Business-OnlinePayment-CyberSource"
       }
    },
    "version" : "2.02"
