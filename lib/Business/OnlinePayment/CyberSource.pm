@@ -3,7 +3,7 @@ use 5.006;
 use strict;
 use warnings;
 BEGIN {
-	# VERSION
+	our $VERSION = '2.02'; # VERSION
 }
 use Carp;
 use Business::OnlinePayment;
@@ -532,6 +532,18 @@ sub request_merge { ## no critic ( Subroutines::RequireFinalReturn )
 
 # ABSTRACT: CyberSource backend for Business::OnlinePayment
 
+
+__END__
+=pod
+
+=head1 NAME
+
+Business::OnlinePayment::CyberSource - CyberSource backend for Business::OnlinePayment
+
+=head1 VERSION
+
+version 2.02
+
 =head1 SYNOPSIS
 
   use Business::OnlinePayment;
@@ -805,4 +817,27 @@ perl(1). L<Business::OnlinePayment>.
 
 =back
 
+=head1 AUTHORS
+
+=over 4
+
+=item *
+
+Peter Bowen <peter@bowenfamily.org>
+
+=item *
+
+Caleb Cushing <xenoterracide@gmail.com>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2011 by Caleb Cushing.
+
+This is free software, licensed under:
+
+  The Artistic License 2.0 (GPL Compatible)
+
 =cut
+

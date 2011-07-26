@@ -1,0 +1,57 @@
+{
+   "abstract" : "CyberSource backend for Business::OnlinePayment",
+   "author" : [
+      "Peter Bowen <peter@bowenfamily.org>",
+      "Caleb Cushing <xenoterracide@gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.200012, CPAN::Meta::Converter version 2.110930",
+   "license" : [
+      "artistic_2"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Business-OnlinePayment-CyberSource",
+   "no_index" : {
+      "file" : [
+         "perlcritic.rc"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.30"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "AutoLoader" : 0,
+            "Business::OnlinePayment" : 0,
+            "Carp" : 0,
+            "CyberSource::SOAPI" : 0,
+            "Exporter" : 0,
+            "parent" : 0,
+            "perl" : "5.006"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "English" : 0,
+            "Env" : 0,
+            "File::Find" : 0,
+            "File::Temp" : 0,
+            "Test::More" : 0
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "repository" : {
+         "type" : "git"
+      }
+   },
+   "version" : "2.02"
+}
+

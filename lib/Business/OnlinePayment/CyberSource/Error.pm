@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 BEGIN {
-	# VERSION
+	our $VERSION = '2.02'; # VERSION
 }
 use parent 'Exporter';
 use AutoLoader;
@@ -315,6 +315,19 @@ sub get_AFS_codes {
 
 # ABSTRACT:  Error Code class for Business::OnlinePayment::CyberSource
 
+
+
+__END__
+=pod
+
+=head1 NAME
+
+Business::OnlinePayment::CyberSource::Error - Error Code class for Business::OnlinePayment::CyberSource
+
+=head1 VERSION
+
+version 2.02
+
 =head1 SYNOPSIS
 
   use Business::OnlinePayment::CyberSource::Error;
@@ -347,6 +360,28 @@ sub get_AFS_codes {
 =head1 SEE ALSO
 
 perl(1). L<Business::OnlinePayment>. L<Business::OnlinePayment::CyberSource>.
+
+=head1 AUTHORS
+
+=over 4
+
+=item *
+
+Peter Bowen <peter@bowenfamily.org>
+
+=item *
+
+Caleb Cushing <xenoterracide@gmail.com>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2011 by Caleb Cushing.
+
+This is free software, licensed under:
+
+  The Artistic License 2.0 (GPL Compatible)
 
 =cut
 

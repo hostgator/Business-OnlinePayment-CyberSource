@@ -1,0 +1,33 @@
+---
+abstract: 'CyberSource backend for Business::OnlinePayment'
+author:
+  - 'Peter Bowen <peter@bowenfamily.org>'
+  - 'Caleb Cushing <xenoterracide@gmail.com>'
+build_requires:
+  English: 0
+  Env: 0
+  File::Find: 0
+  File::Temp: 0
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.200012, CPAN::Meta::Converter version 2.110930'
+license: artistic_2
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Business-OnlinePayment-CyberSource
+no_index:
+  file:
+    - perlcritic.rc
+requires:
+  AutoLoader: 0
+  Business::OnlinePayment: 0
+  Carp: 0
+  CyberSource::SOAPI: 0
+  Exporter: 0
+  parent: 0
+  perl: 5.006
+resources: {}
+version: 2.02

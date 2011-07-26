@@ -1,6 +1,6 @@
-Revision history for {{$dist->name}}
+Revision history for Business-OnlinePayment-CyberSource
 
-{{$NEXT}}
+2.02      2011-07-25
 
 2.01      2011-07-25
 	- use dist-zilla
