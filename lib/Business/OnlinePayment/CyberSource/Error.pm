@@ -4,7 +4,6 @@ use strict;
 use warnings;
 
 BEGIN {
-
 	our $VERSION = '2.02'; # VERSION
 }
 use parent 'Exporter';

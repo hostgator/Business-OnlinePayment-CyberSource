@@ -29,6 +29,7 @@ my %WriteMakefileArgs = (
     'AutoLoader' => '0',
     'Business::OnlinePayment' => '0',
     'Carp' => '0',
+    'Class::Method::Modifiers' => '0',
     'CyberSource::SOAPI' => '0',
     'Exporter' => '0',
     'parent' => '0'
