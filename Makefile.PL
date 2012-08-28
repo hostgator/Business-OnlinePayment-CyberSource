@@ -2,41 +2,50 @@
 use strict;
 use warnings;
 
-use 5.006;
+use 5.010;
 
 use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'CyberSource backend for Business::OnlinePayment',
-  'AUTHOR' => 'Peter Bowen <peter@bowenfamily.org>, Caleb Cushing <xenoterracide@gmail.com>',
-  'BUILD_REQUIRES' => {
-    'English' => '0',
-    'Env' => '0',
-    'File::Find' => '0',
-    'File::Temp' => '0',
-    'Test::More' => '0'
+  "ABSTRACT" => "CyberSource backend for Business::OnlinePayment",
+  "AUTHOR" => "Jad Wauthier <Jadrien dot Wauthier at GMail dot com>, Caleb Cushing <xenoterracide\@gmail.com>, Peter Bowen <peter\@bowenfamily.org>",
+  "BUILD_REQUIRES" => {
+    "File::Find" => 0,
+    "File::Temp" => 0,
+    "Test::More" => 0
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'Business-OnlinePayment-CyberSource',
-  'EXE_FILES' => [],
-  'LICENSE' => 'artistic_2',
-  'NAME' => 'Business::OnlinePayment::CyberSource',
-  'PREREQ_PM' => {
-    'AutoLoader' => '0',
-    'Business::OnlinePayment' => '0',
-    'Carp' => '0',
-    'Class::Method::Modifiers' => '0',
-    'CyberSource::SOAPI' => '0',
-    'Exporter' => '0',
-    'parent' => '0'
+  "DISTNAME" => "Business-OnlinePayment-CyberSource",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Business::OnlinePayment::CyberSource",
+  "PREREQ_PM" => {
+    "Business::CyberSource::Client" => 0,
+    "Business::OnlinePayment" => 0,
+    "Class::Load" => "0.20",
+    "Data::Dump" => 0,
+    "DateTime" => 0,
+    "Exception::Base" => 0,
+    "Moose" => 0,
+    "Moose::Role" => 0,
+    "MooseX::Aliases" => 0,
+    "MooseX::NonMoose" => 0,
+    "MooseX::StrictConstructor" => 0,
+    "MooseX::Types::Common::String" => 0,
+    "MooseX::Types::CyberSource" => 0,
+    "MooseX::Types::Moose" => 0,
+    "Try::Tiny" => 0,
+    "namespace::autoclean" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  'VERSION' => '2.02',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "3.000003",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

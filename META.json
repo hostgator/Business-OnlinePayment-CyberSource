@@ -1,13 +1,14 @@
 {
    "abstract" : "CyberSource backend for Business::OnlinePayment",
    "author" : [
-      "Peter Bowen <peter@bowenfamily.org>",
-      "Caleb Cushing <xenoterracide@gmail.com>"
+      "Jad Wauthier <Jadrien dot Wauthier at GMail dot com>",
+      "Caleb Cushing <xenoterracide@gmail.com>",
+      "Peter Bowen <peter@bowenfamily.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200012, CPAN::Meta::Converter version 2.110930",
+   "generated_by" : "Dist::Zilla version 4.300021, CPAN::Meta::Converter version 2.120921",
    "license" : [
-      "artistic_2"
+      "perl_5"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -27,37 +28,68 @@
       },
       "runtime" : {
          "requires" : {
-            "AutoLoader" : 0,
-            "Business::OnlinePayment" : 0,
-            "Carp" : 0,
-            "Class::Method::Modifiers" : 0,
-            "CyberSource::SOAPI" : 0,
-            "Exporter" : 0,
-            "parent" : 0,
-            "perl" : "5.006"
+            "Business::CyberSource::Client" : "0",
+            "Business::OnlinePayment" : "0",
+            "Class::Load" : "0.20",
+            "Data::Dump" : "0",
+            "DateTime" : "0",
+            "Exception::Base" : "0",
+            "Moose" : "0",
+            "Moose::Role" : "0",
+            "MooseX::Aliases" : "0",
+            "MooseX::NonMoose" : "0",
+            "MooseX::StrictConstructor" : "0",
+            "MooseX::Types::Common::String" : "0",
+            "MooseX::Types::CyberSource" : "0",
+            "MooseX::Types::Moose" : "0",
+            "Try::Tiny" : "0",
+            "namespace::autoclean" : "0",
+            "perl" : "5.010",
+            "strict" : "0",
+            "warnings" : "0"
          }
       },
       "test" : {
          "requires" : {
-            "English" : 0,
-            "Env" : 0,
-            "File::Find" : 0,
-            "File::Temp" : 0,
-            "Test::More" : 0
+            "File::Find" : "0",
+            "File::Temp" : "0",
+            "Test::More" : "0"
          }
+      }
+   },
+   "provides" : {
+      "Business::OnlinePayment::CyberSource" : {
+         "file" : "lib/Business/OnlinePayment/CyberSource.pm",
+         "version" : "3.000003"
+      },
+      "Business::OnlinePayment::CyberSource::Client" : {
+         "file" : "lib/Business/OnlinePayment/CyberSource/Client.pm",
+         "version" : "3.000003"
+      },
+      "Business::OnlinePayment::CyberSource::Role::ErrorReporting" : {
+         "file" : "lib/Business/OnlinePayment/CyberSource/Role/ErrorReporting.pm",
+         "version" : "3.000003"
+      },
+      "Business::OnlinePayment::CyberSource::Role::InputHandling" : {
+         "file" : "lib/Business/OnlinePayment/CyberSource/Role/InputHandling.pm",
+         "version" : "3.000003"
+      },
+      "Business::OnlinePayment::CyberSource::Role::TransactionHandling" : {
+         "file" : "lib/Business/OnlinePayment/CyberSource/Role/TransactionHandling.pm",
+         "version" : "3.000003"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/xenoterracide/Business-OnlinePayment-CyberSource/issues"
+         "web" : "https://github.com/seeingclearlynow/Business-OnlinePayment-CyberSource/issues"
       },
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/xenoterracide/Business-OnlinePayment-CyberSource.git",
-         "web" : "https://github.com/xenoterracide/Business-OnlinePayment-CyberSource"
+         "url" : "git://github.com/seeingclearlynow/Business-OnlinePayment-CyberSource.git",
+         "web" : "https://github.com/seeingclearlynow/Business-OnlinePayment-CyberSource"
       }
    },
-   "version" : "2.02"
+   "version" : "3.000003"
 }
 

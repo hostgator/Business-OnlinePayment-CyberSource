@@ -1,19 +1,18 @@
 ---
 abstract: 'CyberSource backend for Business::OnlinePayment'
 author:
-  - 'Peter Bowen <peter@bowenfamily.org>'
+  - 'Jad Wauthier <Jadrien dot Wauthier at GMail dot com>'
   - 'Caleb Cushing <xenoterracide@gmail.com>'
+  - 'Peter Bowen <peter@bowenfamily.org>'
 build_requires:
-  English: 0
-  Env: 0
   File::Find: 0
   File::Temp: 0
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200012, CPAN::Meta::Converter version 2.110930'
-license: artistic_2
+generated_by: 'Dist::Zilla version 4.300021, CPAN::Meta::Converter version 2.120921'
+license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -21,16 +20,43 @@ name: Business-OnlinePayment-CyberSource
 no_index:
   file:
     - perlcritic.rc
+provides:
+  Business::OnlinePayment::CyberSource:
+    file: lib/Business/OnlinePayment/CyberSource.pm
+    version: 3.000003
+  Business::OnlinePayment::CyberSource::Client:
+    file: lib/Business/OnlinePayment/CyberSource/Client.pm
+    version: 3.000003
+  Business::OnlinePayment::CyberSource::Role::ErrorReporting:
+    file: lib/Business/OnlinePayment/CyberSource/Role/ErrorReporting.pm
+    version: 3.000003
+  Business::OnlinePayment::CyberSource::Role::InputHandling:
+    file: lib/Business/OnlinePayment/CyberSource/Role/InputHandling.pm
+    version: 3.000003
+  Business::OnlinePayment::CyberSource::Role::TransactionHandling:
+    file: lib/Business/OnlinePayment/CyberSource/Role/TransactionHandling.pm
+    version: 3.000003
 requires:
-  AutoLoader: 0
+  Business::CyberSource::Client: 0
   Business::OnlinePayment: 0
-  Carp: 0
-  Class::Method::Modifiers: 0
-  CyberSource::SOAPI: 0
-  Exporter: 0
-  parent: 0
-  perl: 5.006
+  Class::Load: 0.20
+  Data::Dump: 0
+  DateTime: 0
+  Exception::Base: 0
+  Moose: 0
+  Moose::Role: 0
+  MooseX::Aliases: 0
+  MooseX::NonMoose: 0
+  MooseX::StrictConstructor: 0
+  MooseX::Types::Common::String: 0
+  MooseX::Types::CyberSource: 0
+  MooseX::Types::Moose: 0
+  Try::Tiny: 0
+  namespace::autoclean: 0
+  perl: 5.010
+  strict: 0
+  warnings: 0
 resources:
-  bugtracker: https://github.com/xenoterracide/Business-OnlinePayment-CyberSource/issues
-  repository: git://github.com/xenoterracide/Business-OnlinePayment-CyberSource.git
-version: 2.02
+  bugtracker: https://github.com/seeingclearlynow/Business-OnlinePayment-CyberSource/issues
+  repository: git://github.com/seeingclearlynow/Business-OnlinePayment-CyberSource.git
+version: 3.000003
