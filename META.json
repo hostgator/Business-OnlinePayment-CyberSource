@@ -82,12 +82,12 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/seeingclearlynow/Business-OnlinePayment-CyberSource/issues"
+         "web" : "https://github.com/hgdev/Business-OnlinePayment-CyberSource/issues"
       },
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/seeingclearlynow/Business-OnlinePayment-CyberSource.git",
-         "web" : "https://github.com/seeingclearlynow/Business-OnlinePayment-CyberSource"
+         "url" : "git://github.com/hgdev/Business-OnlinePayment-CyberSource.git",
+         "web" : "https://github.com/hgdev/Business-OnlinePayment-CyberSource"
       }
    },
    "version" : "3.000003"

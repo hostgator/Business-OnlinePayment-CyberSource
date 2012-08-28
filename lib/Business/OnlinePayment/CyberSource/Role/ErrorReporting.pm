@@ -83,8 +83,7 @@ This role provides consumers with an errors array attribute and supporting metho
 =head1 BUGS
 
 Please report any bugs or feature requests on the bugtracker website
-https://github.com/seeingclearlynow/Business-OnlinePayment-CyberSource/issu
-es
+https://github.com/hgdev/Business-OnlinePayment-CyberSource/issues
 
 When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired

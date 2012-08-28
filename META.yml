@@ -57,6 +57,6 @@ requires:
   strict: 0
   warnings: 0
 resources:
-  bugtracker: https://github.com/seeingclearlynow/Business-OnlinePayment-CyberSource/issues
-  repository: git://github.com/seeingclearlynow/Business-OnlinePayment-CyberSource.git
+  bugtracker: https://github.com/hgdev/Business-OnlinePayment-CyberSource/issues
+  repository: git://github.com/hgdev/Business-OnlinePayment-CyberSource.git
 version: 3.000003
