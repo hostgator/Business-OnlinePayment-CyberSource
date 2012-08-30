@@ -8,7 +8,7 @@ use namespace::autoclean;
 use Moose::Role;
 
 # ABSTRACT:  Input handling convenience methods for Business::OnlinePayment::CyberSource
-our $VERSION = '3.000003'; # VERSION
+our $VERSION = '3.000004'; # VERSION
 
 #### Subroutine Definitions ####
 
@@ -34,8 +34,8 @@ sub _parse_input { ## no critic ( Subroutines::ProhibitUnusedPrivateSubroutines 
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -44,7 +44,7 @@ Business::OnlinePayment::CyberSource::Role::InputHandling - Input handling conve
 
 =head1 VERSION
 
-version 3.000003
+version 3.000004
 
 =head1 SYNOPSIS
 
@@ -115,4 +115,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

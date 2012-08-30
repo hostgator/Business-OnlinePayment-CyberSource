@@ -15,7 +15,7 @@ use MooseX::Types::Moose qw(Bool HashRef Int Str);
 use MooseX::Types::Common::String qw(NonEmptySimpleStr);
 
 # ABSTRACT:  CyberSource Client object  for Business::OnlinePayment::CyberSource
-our $VERSION = '3.000003'; # VERSION
+our $VERSION = '3.000004'; # VERSION
 
 #### Subroutine Definitions ####
 
@@ -616,8 +616,8 @@ __PACKAGE__->meta->make_immutable();
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -626,7 +626,7 @@ Business::OnlinePayment::CyberSource::Client - CyberSource Client object  for Bu
 
 =head1 VERSION
 
-version 3.000003
+version 3.000004
 
 =head1 SYNOPSIS
 
@@ -926,4 +926,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

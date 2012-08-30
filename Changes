@@ -1,5 +1,8 @@
 Revision history for Business-OnlinePayment-CyberSource
 
+3.000004  2012-08-30
+	- fix dependencies
+
 3.000003  2012-08-28
 	- fix licensing
 	- release to cpan

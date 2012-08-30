@@ -24,6 +24,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Business::OnlinePayment::CyberSource",
   "PREREQ_PM" => {
+    "Business::CyberSource" => "0.006000",
     "Business::CyberSource::Client" => 0,
     "Business::OnlinePayment" => 0,
     "Class::Load" => "0.20",
@@ -43,7 +44,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "3.000003",
+  "VERSION" => "3.000004",
   "test" => {
     "TESTS" => "t/*.t"
   }

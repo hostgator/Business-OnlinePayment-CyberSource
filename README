@@ -3,7 +3,7 @@ NAME
     Business::OnlinePayment
 
 VERSION
-    version 3.000003
+    version 3.000004
 
 SYNOPSIS
             use Business::OnlinePayment;
