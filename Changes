@@ -1,5 +1,10 @@
 Revision history for Business-OnlinePayment-CyberSource
 
+3.000005  2012-09-04
+	- Specify minimum version of Business::CyberSource as 0.006000
+	- Set response values for success and failure
+	- Add auth failure tests
+
 3.000004  2012-08-30
 	- fix dependencies
 

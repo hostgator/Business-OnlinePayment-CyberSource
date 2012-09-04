@@ -12,7 +12,7 @@ use Try::Tiny;
 use Business::OnlinePayment::CyberSource::Client;
 
 # ABSTRACT:  Transaction handling role for BOP::CyberSource
-our $VERSION = '3.000004'; # VERSION
+our $VERSION = '3.000005'; # VERSION
 
 #### Subroutine Definitions ####
 
@@ -203,7 +203,7 @@ Business::OnlinePayment::CyberSource::Role::TransactionHandling - Transaction ha
 
 =head1 VERSION
 
-version 3.000004
+version 3.000005
 
 =head1 SYNOPSIS
 
