@@ -11,7 +11,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300021, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 4.300024, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,19 +23,19 @@ no_index:
 provides:
   Business::OnlinePayment::CyberSource:
     file: lib/Business/OnlinePayment/CyberSource.pm
-    version: 3.000005
+    version: 3.000006
   Business::OnlinePayment::CyberSource::Client:
     file: lib/Business/OnlinePayment/CyberSource/Client.pm
-    version: 3.000005
+    version: 3.000006
   Business::OnlinePayment::CyberSource::Role::ErrorReporting:
     file: lib/Business/OnlinePayment/CyberSource/Role/ErrorReporting.pm
-    version: 3.000005
+    version: 3.000006
   Business::OnlinePayment::CyberSource::Role::InputHandling:
     file: lib/Business/OnlinePayment/CyberSource/Role/InputHandling.pm
-    version: 3.000005
+    version: 3.000006
   Business::OnlinePayment::CyberSource::Role::TransactionHandling:
     file: lib/Business/OnlinePayment/CyberSource/Role/TransactionHandling.pm
-    version: 3.000005
+    version: 3.000006
 requires:
   Business::CyberSource: 0.006000
   Business::CyberSource::Client: 0
@@ -60,4 +60,4 @@ requires:
 resources:
   bugtracker: https://github.com/hgdev/Business-OnlinePayment-CyberSource/issues
   repository: git://github.com/hgdev/Business-OnlinePayment-CyberSource.git
-version: 3.000005
+version: 3.000006

@@ -8,7 +8,7 @@ use namespace::autoclean;
 use Moose::Role;
 
 # ABSTRACT:  Input handling convenience methods for Business::OnlinePayment::CyberSource
-our $VERSION = '3.000005'; # VERSION
+our $VERSION = '3.000006'; # VERSION
 
 #### Subroutine Definitions ####
 
@@ -44,7 +44,7 @@ Business::OnlinePayment::CyberSource::Role::InputHandling - Input handling conve
 
 =head1 VERSION
 
-version 3.000005
+version 3.000006
 
 =head1 SYNOPSIS
 

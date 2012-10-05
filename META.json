@@ -6,7 +6,7 @@
       "Peter Bowen <peter@bowenfamily.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300021, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300024, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -61,23 +61,23 @@
    "provides" : {
       "Business::OnlinePayment::CyberSource" : {
          "file" : "lib/Business/OnlinePayment/CyberSource.pm",
-         "version" : "3.000005"
+         "version" : "3.000006"
       },
       "Business::OnlinePayment::CyberSource::Client" : {
          "file" : "lib/Business/OnlinePayment/CyberSource/Client.pm",
-         "version" : "3.000005"
+         "version" : "3.000006"
       },
       "Business::OnlinePayment::CyberSource::Role::ErrorReporting" : {
          "file" : "lib/Business/OnlinePayment/CyberSource/Role/ErrorReporting.pm",
-         "version" : "3.000005"
+         "version" : "3.000006"
       },
       "Business::OnlinePayment::CyberSource::Role::InputHandling" : {
          "file" : "lib/Business/OnlinePayment/CyberSource/Role/InputHandling.pm",
-         "version" : "3.000005"
+         "version" : "3.000006"
       },
       "Business::OnlinePayment::CyberSource::Role::TransactionHandling" : {
          "file" : "lib/Business/OnlinePayment/CyberSource/Role/TransactionHandling.pm",
-         "version" : "3.000005"
+         "version" : "3.000006"
       }
    },
    "release_status" : "stable",
@@ -91,6 +91,6 @@
          "web" : "https://github.com/hgdev/Business-OnlinePayment-CyberSource"
       }
    },
-   "version" : "3.000005"
+   "version" : "3.000006"
 }
 

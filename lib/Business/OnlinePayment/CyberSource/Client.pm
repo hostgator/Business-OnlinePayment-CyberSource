@@ -16,7 +16,7 @@ use MooseX::Types::Moose qw(Bool HashRef Int Str);
 use MooseX::Types::Common::String qw(NonEmptySimpleStr);
 
 # ABSTRACT:  CyberSource Client object  for Business::OnlinePayment::CyberSource
-our $VERSION = '3.000005'; # VERSION
+our $VERSION = '3.000006'; # VERSION
 
 #### Subroutine Definitions ####
 
@@ -43,7 +43,6 @@ sub sale {
 sub _authorize          {
 	my ( $self, $class, @args ) = @_;
 	my $data            = $self->_parse_input( @args );
-	my $success         = 0;
 
 	# Validate input
 	my $message;
@@ -74,36 +73,31 @@ sub _authorize          {
 
 		$self->set_error_message( "$message" );
 
-		return $success;
+		return $self->is_success();
 	};
 
 	return $request unless $request;
 
 	try {
 		my $response        = $self->run_transaction( $request );
-		my $res           = $response->trace->response();
 
 		if ( $response->is_success() ) {
-			$success          = 1;
+			$self->is_success( 1 );
 
-			$self->is_success( $success );
-			$self->authorization( $response->auth_code() );
+			$self->authorization( $response->auth_code() )
+				if $response->does( 'Business::CyberSource::Response::Role::Authorization' );
+
 			$self->cvv2_response( $response->cv_code() ) if $response->has_cv_code();
 		}
 		else {
 			$self->set_error_message( $response->reason_text() );
 		}
 
-		$self->avs_code( $response->avs_code() );
-		$self->order_number( $response->request_id() );
-		$self->response_code( $res->code() );
-		$self->response_page( $res->content() );
-		$self->response_headers({
-				map { ## no critic ( BuiltinFunctions::ProhibitVoidMap )
-					$_ => $res->headers->header( $_ )
-				} $res->headers->header_field_names()
-			} );
-		$self->result_code( $response->reason_code() );
+		$self->avs_code( $response->avs_code() )
+			if $response->does( 'Business::CyberSource::Response::Role::AVS' )
+			&& $response->has_avs_code;
+
+		$self->_fill_fields( $response );
 	}
 	catch {
 		$message = shift;
@@ -111,7 +105,7 @@ sub _authorize          {
 		$self->set_error_message( "$message" );
 	};
 
-	return $success;
+	return $self->is_success();
 }
 
 # Sends a capture request to CyberSource
@@ -121,7 +115,6 @@ sub _authorize          {
 sub capture            {
 	my ( $self, @args ) = @_;
 	my $data            = $self->_parse_input( @args );
-	my $success         = 0;
 
 	#Validate input
 	my $message         = '';
@@ -145,33 +138,22 @@ sub capture            {
 
 		$self->set_error_message( "$message" );
 
-		return $success;
+		return $self->is_success();
 	};
 
 	return $request unless $request;
 
 	try {
 		my $response      = $self->run_transaction( $request );
-		my $res         = $response->trace->response();
 
 		if ( $response->is_success() ) {
-			$success        = 1;
-
-			$self->is_success ( $success );
+			$self->is_success ( 1 );
 		}
 		else {
 			$self->set_error_message( $response->reason_text() );
 		}
 
-		$self->order_number( $response->request_id() );
-		$self->response_code( $response->reason_code() );
-		$self->response_page( $res->content() );
-		$self->response_headers({
-				map { ## no critic ( BuiltinFunctions::ProhibitVoidMap )
-					$_ => $res->headers->header( $_ )
-				} $res->headers->header_field_names()
-			} );
-			$self->result_code( $response->reason_code() );
+		$self->_fill_fields( $response );
 	}
 	catch {
 		$message       = shift;
@@ -179,7 +161,7 @@ sub capture            {
 		$self->set_error_message( "$message" );
 	};
 
-	return $success;
+	return $self->is_success();
 }
 
 # Sends a credit request to CyberSource
@@ -189,7 +171,6 @@ sub capture            {
 sub credit             {
 	my ( $self, @args ) = @_;
 	my $data            = $self->_parse_input( @args );
-	my $success         = 0;
 
 	#Validate input
 	my $message         = '';
@@ -215,33 +196,22 @@ sub credit             {
 
 		$self->set_error_message( "$message" );
 
-		return $success;
+		return $self->is_success();
 	};
 
 	return $request unless $request;
 
 	try {
 		my $response      = $self->run_transaction( $request );
-		my $res         = $response->trace->response();
 
 		if ( $response->is_success() ) {
-			$success        = 1;
-
-			$self->is_success ( $success );
+			$self->is_success ( 1 );
 		}
 		else {
 			$self->set_error_message( $response->reason_text() );
 		}
 
-		$self->order_number( $response->request_id() );
-		$self->response_code( $response->reason_code() );
-		$self->response_page( $res->content() );
-		$self->response_headers({
-				map { ## no critic ( BuiltinFunctions::ProhibitVoidMap )
-					$_ => $res->headers->header( $_ )
-				} $res->headers->header_field_names()
-			} );
-			$self->result_code( $response->reason_code() );
+		$self->_fill_fields( $response );
 	}
 	catch {
 		$message       = shift;
@@ -249,7 +219,7 @@ sub credit             {
 		$self->set_error_message( "$message" );
 	};
 
-	return $success;
+	return $self->is_success();
 }
 
 # Sends a AuthReversal request to CyberSource
@@ -259,7 +229,6 @@ sub credit             {
 sub auth_reversal {
 	my ( $self, @args ) = @_;
 	my $data            = $self->_parse_input( @args );
-	my $success         = 0;
 
 	#Validate input
 	my $message;
@@ -280,30 +249,21 @@ sub auth_reversal {
 	}
 	catch {
 		$self->set_error_message( "$_" );
+
+		return $self->is_success();
 	};
 
 	try {
 		my $response        = $self->run_transaction( $request );
-		my $res         = $response->trace->response();
 
 		if ( $response->is_success() ) {
-			$success        = 1;
-
-			$self->is_success ( $success );
+			$self->is_success ( 1 );
 		}
 		else {
 			$self->set_error_message( $response->reason_text() );
 		}
 
-		$self->order_number( $response->request_id() );
-		$self->response_code( $response->reason_code() );
-		$self->response_page( $res->content() );
-		$self->response_headers({
-				map { ## no critic ( BuiltinFunctions::ProhibitVoidMap )
-					$_ => $res->headers->header( $_ )
-				} $res->headers->header_field_names()
-			} );
-			$self->result_code( $response->reason_code() );
+		$self->_fill_fields( $response );
 	}
 	catch {
 		$message       = shift;
@@ -311,7 +271,37 @@ sub auth_reversal {
 		$self->set_error_message( "$message" );
 	};
 
-	return $success;
+	return $self->is_success();
+}
+
+# Sets various response fields
+# Accepts:  Nothing
+# Returns:  Nothing
+
+sub _fill_fields {
+	my ( $self, $response ) = @_;
+	my $res                 = {};
+
+	return unless ( $response and $response->isa( 'Business::CyberSource::Response' ) );
+
+	if ( $response->trace() ) {
+		$res           = $response->trace->response();
+	}
+	else {
+		Exception::Base->throw( 'Request failed' );
+	}
+
+	my $h                   = $res->headers();
+	my $names               = [ $h->header_field_names() ];
+	my $headers             = { map { $_ => $h->header( $_ ) } @$names }; ## no critic ( BuiltinFunctions::ProhibitVoidMap )
+
+	$self->order_number( $response->request_id() );
+	$self->response_code( $res->code() );
+	$self->response_page( $res->content() );
+	$self->response_headers( $headers );
+	$self->result_code( $response->reason_code() );
+
+	return;
 }
 
 # Resets all transaction fields
@@ -630,7 +620,7 @@ Business::OnlinePayment::CyberSource::Client - CyberSource Client object  for Bu
 
 =head1 VERSION
 
-version 3.000005
+version 3.000006
 
 =head1 SYNOPSIS
 
