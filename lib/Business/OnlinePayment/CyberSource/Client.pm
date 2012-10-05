@@ -16,7 +16,7 @@ use MooseX::Types::Moose qw(Bool HashRef Int Str);
 use MooseX::Types::Common::String qw(NonEmptySimpleStr);
 
 # ABSTRACT:  CyberSource Client object  for Business::OnlinePayment::CyberSource
-our $VERSION = '3.000006'; # VERSION
+our $VERSION = '3.000007'; # VERSION
 
 #### Subroutine Definitions ####
 
@@ -81,21 +81,27 @@ sub _authorize          {
 	try {
 		my $response        = $self->run_transaction( $request );
 
-		if ( $response->is_success() ) {
+		if ( $response->is_accepted() ) {
 			$self->is_success( 1 );
 
-			$self->authorization( $response->auth_code() )
-				if $response->does( 'Business::CyberSource::Response::Role::Authorization' );
-
-			$self->cvv2_response( $response->cv_code() ) if $response->has_cv_code();
 		}
 		else {
 			$self->set_error_message( $response->reason_text() );
 		}
 
-		$self->avs_code( $response->avs_code() )
-			if $response->does( 'Business::CyberSource::Response::Role::AVS' )
-			&& $response->has_avs_code;
+		if ( $response->does(
+				'Business::CyberSource::Response::Role::Authorization'
+				)
+			) {
+			$self->authorization( $response->auth_code() )
+				if $response->has_auth_code;
+
+			$self->cvv2_response( $response->cv_code() )
+				if $response->has_cv_code();
+
+			$self->avs_code( $response->avs_code() )
+				if $response->has_avs_code;
+		}
 
 		$self->_fill_fields( $response );
 	}
@@ -620,7 +626,7 @@ Business::OnlinePayment::CyberSource::Client - CyberSource Client object  for Bu
 
 =head1 VERSION
 
-version 3.000006
+version 3.000007
 
 =head1 SYNOPSIS
 

@@ -11,7 +11,7 @@ use MooseX::Types::Moose qw(Str);
 use MooseX::Types::Common::String qw(NonEmptySimpleStr);
 
 # ABSTRACT:  Error reporting role for BOP::CyberSource
-our $VERSION = '3.000006'; # VERSION
+our $VERSION = '3.000007'; # VERSION
 
 #### Subroutine Definitions ####
 
@@ -51,7 +51,7 @@ Business::OnlinePayment::CyberSource::Role::ErrorReporting - Error reporting rol
 
 =head1 VERSION
 
-version 3.000006
+version 3.000007
 
 =head1 SYNOPSIS
 
