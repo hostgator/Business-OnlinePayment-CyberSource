@@ -14,7 +14,7 @@ use MooseX::Types::Moose qw(Bool HashRef Int);
 use MooseX::Types::Common::String qw(NonEmptySimpleStr);
 
 # ABSTRACT:  CyberSource backend for Business::OnlinePayment
-our $VERSION = '3.000007'; # VERSION
+our $VERSION = '3.000010'; # VERSION
 
 extends 'Business::OnlinePayment';
 
@@ -57,7 +57,7 @@ Business::OnlinePayment::CyberSource - CyberSource backend for Business::OnlineP
 
 =head1 VERSION
 
-version 3.000007
+version 3.000010
 
 =head1 SYNOPSIS
 

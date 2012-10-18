@@ -25,7 +25,7 @@ my %WriteMakefileArgs = (
   "NAME" => "Business::OnlinePayment::CyberSource",
   "PREREQ_PM" => {
     "Business::CyberSource" => "0.006000",
-    "Business::CyberSource::Client" => 0,
+    "Business::CyberSource::Client" => "0.007001",
     "Business::OnlinePayment" => 0,
     "Class::Load" => "0.20",
     "Data::Dump" => 0,
@@ -44,7 +44,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "3.000007",
+  "VERSION" => "3.000010",
   "test" => {
     "TESTS" => "t/*.t"
   }

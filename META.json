@@ -6,7 +6,7 @@
       "Peter Bowen <peter@bowenfamily.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300024, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300026, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -26,10 +26,18 @@
             "ExtUtils::MakeMaker" : "6.30"
          }
       },
+      "develop" : {
+         "requires" : {
+            "Pod::Coverage::TrustPod" : "0",
+            "Test::CPAN::Meta" : "0",
+            "Test::Pod" : "1.41",
+            "Test::Pod::Coverage" : "1.08"
+         }
+      },
       "runtime" : {
          "requires" : {
             "Business::CyberSource" : "0.006000",
-            "Business::CyberSource::Client" : "0",
+            "Business::CyberSource::Client" : "0.007001",
             "Business::OnlinePayment" : "0",
             "Class::Load" : "0.20",
             "Data::Dump" : "0",
@@ -61,23 +69,23 @@
    "provides" : {
       "Business::OnlinePayment::CyberSource" : {
          "file" : "lib/Business/OnlinePayment/CyberSource.pm",
-         "version" : "3.000007"
+         "version" : "3.000010"
       },
       "Business::OnlinePayment::CyberSource::Client" : {
          "file" : "lib/Business/OnlinePayment/CyberSource/Client.pm",
-         "version" : "3.000007"
+         "version" : "3.000010"
       },
       "Business::OnlinePayment::CyberSource::Role::ErrorReporting" : {
          "file" : "lib/Business/OnlinePayment/CyberSource/Role/ErrorReporting.pm",
-         "version" : "3.000007"
+         "version" : "3.000010"
       },
       "Business::OnlinePayment::CyberSource::Role::InputHandling" : {
          "file" : "lib/Business/OnlinePayment/CyberSource/Role/InputHandling.pm",
-         "version" : "3.000007"
+         "version" : "3.000010"
       },
       "Business::OnlinePayment::CyberSource::Role::TransactionHandling" : {
          "file" : "lib/Business/OnlinePayment/CyberSource/Role/TransactionHandling.pm",
-         "version" : "3.000007"
+         "version" : "3.000010"
       }
    },
    "release_status" : "stable",
@@ -91,6 +99,6 @@
          "web" : "https://github.com/hgdev/Business-OnlinePayment-CyberSource"
       }
    },
-   "version" : "3.000007"
+   "version" : "3.000010"
 }
 

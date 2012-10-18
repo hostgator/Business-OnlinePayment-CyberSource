@@ -17,6 +17,7 @@ t/author-pod-spell.t
 t/author-test-eol.t
 t/authorization-only.t
 t/credit.t
+t/die-on-error.t
 t/expiration-conversion.t
 t/normal-authorization.t
 t/post-authorization.t
