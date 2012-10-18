@@ -11,7 +11,7 @@ use MooseX::Types::Moose qw(Str);
 use MooseX::Types::Common::String qw(NonEmptySimpleStr);
 
 # ABSTRACT:  Error reporting role for BOP::CyberSource
-our $VERSION = '3.000010'; # VERSION
+our $VERSION = '3.000010'; # TRIAL VERSION
 
 #### Subroutine Definitions ####
 

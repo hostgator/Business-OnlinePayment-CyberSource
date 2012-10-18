@@ -14,7 +14,7 @@ use MooseX::Types::Moose qw(Bool HashRef Int);
 use MooseX::Types::Common::String qw(NonEmptySimpleStr);
 
 # ABSTRACT:  CyberSource backend for Business::OnlinePayment
-our $VERSION = '3.000010'; # VERSION
+our $VERSION = '3.000010'; # TRIAL VERSION
 
 extends 'Business::OnlinePayment';
 
