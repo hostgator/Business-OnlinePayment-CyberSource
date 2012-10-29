@@ -6,7 +6,7 @@
       "Peter Bowen <peter@bowenfamily.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300027, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -91,12 +91,12 @@
    "release_status" : "testing",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/hgdev/Business-OnlinePayment-CyberSource/issues"
+         "web" : "https://github.com/hostgator/Business-OnlinePayment-CyberSource/issues"
       },
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/hgdev/Business-OnlinePayment-CyberSource.git",
-         "web" : "https://github.com/hgdev/Business-OnlinePayment-CyberSource"
+         "url" : "git://github.com/hostgator/Business-OnlinePayment-CyberSource.git",
+         "web" : "https://github.com/hostgator/Business-OnlinePayment-CyberSource"
       }
    },
    "version" : "3.000010"
