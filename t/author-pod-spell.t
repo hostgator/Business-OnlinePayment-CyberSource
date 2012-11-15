@@ -41,7 +41,7 @@ Caleb
 Cushing
 Peter
 Bowen
-Hostgator
+HostGator
 lib
 Business
 OnlinePayment
