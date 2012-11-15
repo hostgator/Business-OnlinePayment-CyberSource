@@ -9,13 +9,13 @@ use Class::Load 0.20 qw(load_class);
 use MooseX::Aliases;
 use MooseX::StrictConstructor;
 use Try::Tiny;
-use Business::CyberSource::Client 0.007001;
+use Business::CyberSource::Client 0.007006;
 use MooseX::Types::CyberSource qw(AVSResult);
 use MooseX::Types::Moose qw(Bool HashRef Int Str);
 use MooseX::Types::Common::String qw(NonEmptySimpleStr);
 
 # ABSTRACT:  CyberSource Client object  for Business::OnlinePayment::CyberSource
-our $VERSION = '3.000010'; # TRIAL VERSION
+our $VERSION = '3.000011'; # VERSION
 
 #### Subroutine Definitions ####
 
@@ -634,7 +634,7 @@ Business::OnlinePayment::CyberSource::Client - CyberSource Client object  for Bu
 
 =head1 VERSION
 
-version 3.000010
+version 3.000011
 
 =head1 SYNOPSIS
 

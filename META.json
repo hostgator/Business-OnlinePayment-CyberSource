@@ -37,7 +37,7 @@
       "runtime" : {
          "requires" : {
             "Business::CyberSource" : "0.006000",
-            "Business::CyberSource::Client" : "0.007001",
+            "Business::CyberSource::Client" : "0.007006",
             "Business::OnlinePayment" : "0",
             "Class::Load" : "0.20",
             "Data::Dump" : "0",
@@ -69,26 +69,26 @@
    "provides" : {
       "Business::OnlinePayment::CyberSource" : {
          "file" : "lib/Business/OnlinePayment/CyberSource.pm",
-         "version" : "3.000010"
+         "version" : "3.000011"
       },
       "Business::OnlinePayment::CyberSource::Client" : {
          "file" : "lib/Business/OnlinePayment/CyberSource/Client.pm",
-         "version" : "3.000010"
+         "version" : "3.000011"
       },
       "Business::OnlinePayment::CyberSource::Role::ErrorReporting" : {
          "file" : "lib/Business/OnlinePayment/CyberSource/Role/ErrorReporting.pm",
-         "version" : "3.000010"
+         "version" : "3.000011"
       },
       "Business::OnlinePayment::CyberSource::Role::InputHandling" : {
          "file" : "lib/Business/OnlinePayment/CyberSource/Role/InputHandling.pm",
-         "version" : "3.000010"
+         "version" : "3.000011"
       },
       "Business::OnlinePayment::CyberSource::Role::TransactionHandling" : {
          "file" : "lib/Business/OnlinePayment/CyberSource/Role/TransactionHandling.pm",
-         "version" : "3.000010"
+         "version" : "3.000011"
       }
    },
-   "release_status" : "testing",
+   "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
          "web" : "https://github.com/hostgator/Business-OnlinePayment-CyberSource/issues"
@@ -99,6 +99,6 @@
          "web" : "https://github.com/hostgator/Business-OnlinePayment-CyberSource"
       }
    },
-   "version" : "3.000010"
+   "version" : "3.000011"
 }
 

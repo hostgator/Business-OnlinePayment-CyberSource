@@ -1,5 +1,7 @@
 Revision history for Business-OnlinePayment-CyberSource
 
+3.000011  2012-11-15
+
 3.000010  2012-10-29
 	- Removed checking of accept role
 	- removed debugging output
